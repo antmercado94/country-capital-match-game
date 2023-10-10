@@ -16,7 +16,7 @@ export default function CountryCapitalGame() {
 	const gridSize = 16; // 8 x 8
 	const isSelectSingle = selected?.length === 1; // one item selected
 	const isSelectPair = selected?.length === 2; // two items selected
-	const isWin = !gameData.gridItems.length;
+	const isWin = gameData.allEntries.length && !gameData.gridItems.length;
 
 	const getEntryMatch = useCallback(
 		([selectedOne, selectedTwo]: GridItem[]) =>
