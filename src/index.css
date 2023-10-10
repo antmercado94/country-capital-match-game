@@ -1,0 +1,126 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	--grid-container-size: 280px;
+	--grid-container-size-sm: 320px;
+	--grid-container-size-md: 520px;
+	--grid-container-size-lg: 600px;
+	--grid-item-size: 70px;
+	--grid-item-size-sm: 80px;
+	--grid-item-size-md: 130px;
+	--grid-item-size-lg: 150px;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	place-items: center;
+	justify-content: center;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+.emptyContainer {
+	min-width: var(--grid-container-size);
+	min-height: var(--grid-container-size);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gameGrid {
+	display: grid;
+	grid-template-columns: repeat(4, var(--grid-item-size));
+	grid-template-rows: repeat(4, var(--grid-item-size));
+	justify-content: center;
+}
+
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-height: var(--grid-item-size);
+	font-size: 0.65rem;
+	font-weight: bold;
+	border: 1px solid white;
+	padding: 0.5rem;
+	background: #2b2a33;
+	color: rgba(255, 255, 255, 0.87);
+}
+
+button:hover {
+	background: #52525e;
+}
+
+footer {
+	font-size: 0.75rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 360px) {
+	.emptyContainer {
+		min-width: var(--grid-container-size-sm);
+		min-height: var(--grid-container-size-sm);
+	}
+	.gameGrid {
+		grid-template-columns: repeat(4, var(--grid-item-size-sm));
+		grid-template-rows: repeat(4, var(--grid-item-size-sm));
+	}
+	button {
+		padding: 1rem;
+		max-height: var(--grid-item-size-sm);
+	}
+	footer {
+		font-size: 0.8rem;
+	}
+}
+
+@media screen and (min-width: 640px) {
+	.emptyContainer {
+		min-width: var(--grid-container-size-md);
+		min-height: var(--grid-container-size-md);
+	}
+	.gameGrid {
+		grid-template-columns: repeat(4, var(--grid-item-size-md));
+		grid-template-rows: repeat(4, var(--grid-item-size-md));
+	}
+	button {
+		font-size: 0.8rem;
+		padding: 3rem;
+		max-height: var(--grid-item-size-md);
+	}
+	footer {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (min-width: 1540px) {
+	.emptyContainer {
+		min-width: var(--grid-container-size-lg);
+		min-height: var(--grid-container-size-lg);
+	}
+	.gameGrid {
+		grid-template-columns: repeat(4, var(--grid-item-size-lg));
+		grid-template-rows: repeat(4, var(--grid-item-size-lg));
+	}
+	button {
+		font-size: 0.95rem;
+		max-height: var(--grid-item-size-lg);
+	}
+	footer {
+		font-size: 1.2rem;
+	}
+}
