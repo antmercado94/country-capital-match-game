@@ -70,6 +70,10 @@ footer {
 	justify-content: space-between;
 }
 
+a {
+	color: rgb(140, 140, 255);
+}
+
 @media screen and (min-width: 360px) {
 	.emptyContainer {
 		min-width: var(--grid-container-size-sm);
